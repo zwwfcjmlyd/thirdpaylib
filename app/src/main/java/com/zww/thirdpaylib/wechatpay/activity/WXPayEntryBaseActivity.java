@@ -1,10 +1,10 @@
-package com.example.a11598.thirdpaylib.wechatpay.activity;
+package com.zww.thirdpaylib.wechatpay.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.a11598.thirdpaylib.wechatpay.wxpay.WXPay;
+import com.zww.thirdpaylib.wechatpay.wxpay.WXPay;
 import com.tencent.mm.opensdk.constants.ConstantsAPI;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;

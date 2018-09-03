@@ -1,4 +1,4 @@
-package com.example.a11598.thirdpaylib;
+package com.zww.thirdpaylib;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.a11598.thirdpaylib", appContext.getPackageName());
+        assertEquals("com.zww.thirdpaylib", appContext.getPackageName());
     }
 }

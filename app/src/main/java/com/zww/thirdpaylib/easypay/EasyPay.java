@@ -8,13 +8,13 @@
 **                         
 **------------------------------------------------------------------------------
 */
-package com.example.a11598.thirdpaylib.easypay;
+package com.zww.thirdpaylib.easypay;
 
 import android.app.Activity;
 
-import com.example.a11598.thirdpaylib.easypay.base.IPayInfo;
-import com.example.a11598.thirdpaylib.easypay.base.IPayStrategy;
-import com.example.a11598.thirdpaylib.easypay.callback.IPayCallback;
+import com.zww.thirdpaylib.easypay.base.IPayInfo;
+import com.zww.thirdpaylib.easypay.base.IPayStrategy;
+import com.zww.thirdpaylib.easypay.callback.IPayCallback;
 
 
 /**

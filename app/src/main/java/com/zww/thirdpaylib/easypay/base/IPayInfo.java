@@ -1,5 +1,3 @@
-package com.example.a11598.thirdpaylib.easypay.callback;
-
 /*
 ******************************* Copyright (c)*********************************\
 **
@@ -10,8 +8,16 @@ package com.example.a11598.thirdpaylib.easypay.callback;
 **                         
 **------------------------------------------------------------------------------
 */
-public interface IPayCallback {
-    void success();
-    void failed();
-    void cancel();
+package com.zww.thirdpaylib.easypay.base;
+
+/**
+ * 文 件 名: IPayInfo
+ * 创 建 人: King
+ * 创建日期: 2017/2/13 16:53
+ * 邮   箱: mikey1101@163.com
+ * 博   客: www.smilevenus.com
+ * 描述 ：
+ */
+public interface IPayInfo {
+
 }

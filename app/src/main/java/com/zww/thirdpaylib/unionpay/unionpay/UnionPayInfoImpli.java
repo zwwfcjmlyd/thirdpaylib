@@ -8,12 +8,12 @@
 **                         
 **------------------------------------------------------------------------------
 */
-package com.example.a11598.thirdpaylib.unionpay.unionpay;
+package com.zww.thirdpaylib.unionpay.unionpay;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.example.a11598.thirdpaylib.easypay.base.IPayInfo;
+import com.zww.thirdpaylib.easypay.base.IPayInfo;
 
 
 /**

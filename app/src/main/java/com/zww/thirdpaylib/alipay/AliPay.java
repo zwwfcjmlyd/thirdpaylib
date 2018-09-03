@@ -8,7 +8,7 @@
 **                         
 **------------------------------------------------------------------------------
 */
-package com.example.a11598.thirdpaylib.alipay;
+package com.zww.thirdpaylib.alipay;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -17,8 +17,8 @@ import android.os.Message;
 import android.text.TextUtils;
 
 import com.alipay.sdk.app.PayTask;
-import com.example.a11598.thirdpaylib.easypay.base.IPayStrategy;
-import com.example.a11598.thirdpaylib.easypay.callback.IPayCallback;
+import com.zww.thirdpaylib.easypay.base.IPayStrategy;
+import com.zww.thirdpaylib.easypay.callback.IPayCallback;
 
 
 /**

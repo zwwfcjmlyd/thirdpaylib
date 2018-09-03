@@ -1,12 +1,12 @@
-package com.example.a11598.thirdpaylib.unionpay.activity;
+package com.zww.thirdpaylib.unionpay.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
-import com.example.a11598.thirdpaylib.unionpay.unionpay.UnionPay;
-import com.example.a11598.thirdpaylib.unionpay.unionpay.UnionPayInfoImpli;
+import com.zww.thirdpaylib.unionpay.unionpay.UnionPay;
+import com.zww.thirdpaylib.unionpay.unionpay.UnionPayInfoImpli;
 
 
 /**

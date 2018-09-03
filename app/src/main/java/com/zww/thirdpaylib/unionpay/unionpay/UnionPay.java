@@ -8,16 +8,16 @@
 **                         
 **------------------------------------------------------------------------------
 */
-package com.example.a11598.thirdpaylib.unionpay.unionpay;
+package com.zww.thirdpaylib.unionpay.unionpay;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 
-import com.example.a11598.thirdpaylib.easypay.base.IPayStrategy;
-import com.example.a11598.thirdpaylib.easypay.callback.IPayCallback;
-import com.example.a11598.thirdpaylib.unionpay.activity.UnionPayAssistActivity;
+import com.zww.thirdpaylib.easypay.base.IPayStrategy;
+import com.zww.thirdpaylib.easypay.callback.IPayCallback;
+import com.zww.thirdpaylib.unionpay.activity.UnionPayAssistActivity;
 import com.unionpay.UPPayAssistEx;
 
 import org.json.JSONException;

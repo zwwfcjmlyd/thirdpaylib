@@ -1,4 +1,4 @@
-package com.example.a11598.thirdpaylib.easypay.base;
+package com.zww.thirdpaylib.easypay.callback;
 
 /*
 ******************************* Copyright (c)*********************************\
@@ -10,19 +10,8 @@ package com.example.a11598.thirdpaylib.easypay.base;
 **                         
 **------------------------------------------------------------------------------
 */
-public class PayException extends Exception {
-    private int mCode;
-
-    public PayException(String message, int code) {
-        super(message);
-        mCode = code;
-    }
-
-    public int getCode() {
-        return mCode;
-    }
-
-    public void setCode(int code) {
-        mCode = code;
-    }
+public interface IPayCallback {
+    void success();
+    void failed();
+    void cancel();
 }

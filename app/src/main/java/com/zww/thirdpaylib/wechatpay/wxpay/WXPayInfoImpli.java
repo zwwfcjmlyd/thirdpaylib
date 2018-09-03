@@ -8,10 +8,10 @@
 **                         
 **------------------------------------------------------------------------------
 */
-package com.example.a11598.thirdpaylib.wechatpay.wxpay;
+package com.zww.thirdpaylib.wechatpay.wxpay;
 
 
-import com.example.a11598.thirdpaylib.easypay.base.IPayInfo;
+import com.zww.thirdpaylib.easypay.base.IPayInfo;
 
 /**
  * 文 件 名: WXPayInfoImpli

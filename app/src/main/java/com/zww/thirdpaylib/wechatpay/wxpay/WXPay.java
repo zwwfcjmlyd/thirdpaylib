@@ -8,13 +8,13 @@
 **                         
 **------------------------------------------------------------------------------
 */
-package com.example.a11598.thirdpaylib.wechatpay.wxpay;
+package com.zww.thirdpaylib.wechatpay.wxpay;
 
 import android.app.Activity;
 import android.text.TextUtils;
 
-import com.example.a11598.thirdpaylib.easypay.base.IPayStrategy;
-import com.example.a11598.thirdpaylib.easypay.callback.IPayCallback;
+import com.zww.thirdpaylib.easypay.base.IPayStrategy;
+import com.zww.thirdpaylib.easypay.callback.IPayCallback;
 import com.tencent.mm.opensdk.constants.Build;
 import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
