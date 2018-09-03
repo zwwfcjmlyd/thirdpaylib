@@ -25,7 +25,7 @@ Step 2. Add the dependency
   
  Step 3. 项目根目录下创建wxapi包,里面创建类返回appid
  
- public class WXPayEntryActivity extends WXPayEntryBaseActivity {
+public class WXPayEntryActivity extends WXPayEntryBaseActivity {
 
     @Override
     public String getWXAppId() {
@@ -34,27 +34,26 @@ Step 2. Add the dependency
 }
   
   
- Step 4. Manifest里面添加如下内容:
+ Step 4. Manifest里面添加如下内容
  
  <activity
-            android:name="com.alipay.sdk.app.H5PayActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-            android:exported="false"
-            android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
-        <activity
-            android:name="com.alipay.sdk.app.H5AuthActivity"
-            android:configChanges="orientation|keyboardHidden|navigation"
-            android:exported="false"
-            android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
-        <activity
-            android:name=".wxapi.WXPayEntryActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|keyboard|navigation"
-            android:exported="true"
-            android:launchMode="singleTop"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-            
+    android:name="com.alipay.sdk.app.H5PayActivity"
+    android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+    android:exported="false"
+    android:screenOrientation="behind"
+    android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+<activity
+    android:name="com.alipay.sdk.app.H5AuthActivity"
+    android:configChanges="orientation|keyboardHidden|navigation"
+    android:exported="false"
+    android:screenOrientation="behind"
+    android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+<activity
+    android:name=".wxapi.WXPayEntryActivity"
+    android:configChanges="keyboardHidden|orientation|screenSize|keyboard|navigation"
+    android:exported="true"
+    android:launchMode="singleTop"
+    android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 
  Step 5.调用
  
