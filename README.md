@@ -24,7 +24,8 @@ Step 2. Add the dependency
 	}
   
  Step 3. 项目根目录下创建wxapi包,里面创建类返回appid
-  public class WXPayEntryActivity extends WXPayEntryBaseActivity {
+ 
+ public class WXPayEntryActivity extends WXPayEntryBaseActivity {
 
     @Override
     public String getWXAppId() {
@@ -34,7 +35,8 @@ Step 2. Add the dependency
   
   
  Step 4. Manifest里面添加如下内容:
-     <activity
+ 
+ <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:exported="false"
@@ -55,7 +57,9 @@ Step 2. Add the dependency
             
 
  Step 5.调用
-    /**
+ 
+ 
+/**
      * 银联
      * @param param
      */
