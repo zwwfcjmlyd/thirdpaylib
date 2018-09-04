@@ -21,7 +21,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.zwwfcjmlyd:thirdpaylib:v1.0.3'
+	        implementation 'com.github.zwwfcjmlyd:thirdpaylib:v1.0.4'
 	}
   
  Step 3. 项目根目录下创建wxapi包,里面创建类返回appid
