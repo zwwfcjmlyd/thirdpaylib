@@ -37,24 +37,62 @@ Step 2. Add the dependency
   
  Step 4. Manifest里面添加如下内容
  
- 	<activity
-	    android:name="com.alipay.sdk.app.H5PayActivity"
-	    android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-	    android:exported="false"
-	    android:screenOrientation="behind"
-	    android:windowSoftInputMode="adjustResize|stateHidden"></activity>
-	<activity
-	    android:name="com.alipay.sdk.app.H5AuthActivity"
-	    android:configChanges="orientation|keyboardHidden|navigation"
-	    android:exported="false"
-	    android:screenOrientation="behind"
-	    android:windowSoftInputMode="adjustResize|stateHidden"></activity>
-	<activity
-	    android:name=".wxapi.WXPayEntryActivity"
-	    android:configChanges="keyboardHidden|orientation|screenSize|keyboard|navigation"
-	    android:exported="true"
-	    android:launchMode="singleTop"
-	    android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-feature android:name="android.hardware.nfc.hce"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD"/>
+ 
+ 	 <!-- pay start -->
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false"/>
+
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.zww.thirdpaylib.unionpay.activity.UnionPayAssistActivity"
+            android:label=""
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Transparent"
+            >
+        </activity>
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|keyboard|navigation"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- pay end -->
 
  Step 5.调用
  
