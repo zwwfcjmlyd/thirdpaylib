@@ -26,40 +26,41 @@ Step 2. Add the dependency
   
  Step 3. 项目根目录下创建wxapi包,里面创建类返回appid
  
-public class WXPayEntryActivity extends WXPayEntryBaseActivity {
+	public class WXPayEntryActivity extends WXPayEntryBaseActivity {
 
-    @Override
-    public String getWXAppId() {
-        return "wxa1d57cb79eeb1a4c";
-    }
-}
+	    @Override
+	    public String getWXAppId() {
+		return "APPID";
+	    }
+	}
   
   
  Step 4. Manifest里面添加如下内容
  
- <activity
-    android:name="com.alipay.sdk.app.H5PayActivity"
-    android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-    android:exported="false"
-    android:screenOrientation="behind"
-    android:windowSoftInputMode="adjustResize|stateHidden"></activity>
-<activity
-    android:name="com.alipay.sdk.app.H5AuthActivity"
-    android:configChanges="orientation|keyboardHidden|navigation"
-    android:exported="false"
-    android:screenOrientation="behind"
-    android:windowSoftInputMode="adjustResize|stateHidden"></activity>
-<activity
-    android:name=".wxapi.WXPayEntryActivity"
-    android:configChanges="keyboardHidden|orientation|screenSize|keyboard|navigation"
-    android:exported="true"
-    android:launchMode="singleTop"
-    android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+ 	<activity
+	    android:name="com.alipay.sdk.app.H5PayActivity"
+	    android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+	    android:exported="false"
+	    android:screenOrientation="behind"
+	    android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+	<activity
+	    android:name="com.alipay.sdk.app.H5AuthActivity"
+	    android:configChanges="orientation|keyboardHidden|navigation"
+	    android:exported="false"
+	    android:screenOrientation="behind"
+	    android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+	<activity
+	    android:name=".wxapi.WXPayEntryActivity"
+	    android:configChanges="keyboardHidden|orientation|screenSize|keyboard|navigation"
+	    android:exported="true"
+	    android:launchMode="singleTop"
+	    android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 
  Step 5.调用
  
  
-/**
+
+	 /**
      * 银联
      * @param param
      */
@@ -89,6 +90,7 @@ public class WXPayEntryActivity extends WXPayEntryBaseActivity {
         });
     }
 
+
     /**
      * 支付宝支付业务
      *
@@ -103,10 +105,7 @@ public class WXPayEntryActivity extends WXPayEntryBaseActivity {
         //策略场景类调起支付方法开始支付，以及接收回调。
         EasyPay.pay(aliPay, rechargeActivity, alipayInfoImpli, new IPayCallback() {
             public void success() {
-                HttpParams params = new HttpParams()
-                        .put("transno", rechargeAliPayResponse.result.transno)
-                        .put("sign", UserHelper.getUser(rechargeActivity).sign);
-                rechargeFragmentPresenter.postFormData(HttpConfig.Url.CHECK_PAY_RESULT, params, HttpConfig.RequestCode.CHECK_PAY_RESULT, StatusResponse.class);
+                MyToast.show(rechargeActivity, "支付成功");
             }
 
             @Override
@@ -138,11 +137,8 @@ public class WXPayEntryActivity extends WXPayEntryBaseActivity {
 
         EasyPay.pay(wxPay, rechargeActivity, wxPayInfoImpli, new IPayCallback() {
             @Override
-            public void success() {
-                HttpParams params = new HttpParams()
-                        .put("transno", rechargeAliPayResponse.result.transno)
-                        .put("sign", UserHelper.getUser(rechargeActivity).sign);
-                rechargeFragmentPresenter.postFormData(HttpConfig.Url.CHECK_PAY_RESULT, params, HttpConfig.RequestCode.CHECK_PAY_RESULT, StatusResponse.class);
+            public void success() 
+                MyToast.show(rechargeActivity, "支付成功");
 
             }
 
